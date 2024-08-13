@@ -44,10 +44,12 @@ public class MainActivity extends AppCompatActivity {
             coffeeNameText.setText(coffee.getName());
             coffeePriceText.setText("$" + coffee.getPrice());
             coffeeQuantityText.setText(String.valueOf(coffee.getQuantity()));  // Set initial quantity
+            minusButton.setEnabled(coffee.getQuantity() > 0);// Enable or disable the minusButton based on the Qty
 
             addButton.setOnClickListener(v -> {
                 coffee.setQuantity(coffee.getQuantity() + 1);
                 coffeeQuantityText.setText(String.valueOf(coffee.getQuantity()));  // Update quantity display
+                minusButton.setEnabled(coffee.getQuantity() > 0);// Enable or disable the minusButton based on the Qty
                 updateTotalAmount();
             });
 
@@ -55,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 if (coffee.getQuantity() > 0) {
                     coffee.setQuantity(coffee.getQuantity() - 1);
                     coffeeQuantityText.setText(String.valueOf(coffee.getQuantity()));  // Update quantity display
+                    minusButton.setEnabled(coffee.getQuantity() > 0);// Enable or disable the minusButton based on the Qty
                     updateTotalAmount();
                 }
             });
