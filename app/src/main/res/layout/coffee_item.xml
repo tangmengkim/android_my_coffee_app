@@ -23,7 +23,7 @@
 
     <Button
         android:id="@+id/minusButton"
-        android:layout_width="wrap_content"
+        android:layout_width="54dp"
         android:layout_height="wrap_content"
         android:text="-" />
 
@@ -39,7 +39,7 @@
 
     <Button
         android:id="@+id/addButton"
-        android:layout_width="wrap_content"
+        android:layout_width="54dp"
         android:layout_height="wrap_content"
         android:text="+" />
 

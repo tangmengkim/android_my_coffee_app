@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My_coffee_app</string>
+    <string name="complete_order">Complete Order</string>
+    <string name="back">Back</string>
 </resources>
