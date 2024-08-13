@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class OrderSummaryActivity extends AppCompatActivity {
 
-    private int totalAmount = 0;
+    private float totalAmount = 0;
     private Button btnBack,btnCompleteOrder;
 
     @Override

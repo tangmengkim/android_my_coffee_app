@@ -5,10 +5,10 @@ import android.os.Parcelable;
 
 public class Coffee implements Parcelable {
     private String name;
-    private int price;
+    private float price;
     private int quantity;
 
-    public Coffee(String name, int price) {
+    public Coffee(String name, float price) {
         this.name = name;
         this.price = price;
         this.quantity = 0;
@@ -16,7 +16,7 @@ public class Coffee implements Parcelable {
 
     protected Coffee(Parcel in) {
         name = in.readString();
-        price = in.readInt();
+        price = in.readFloat();
         quantity = in.readInt();
     }
 
@@ -36,7 +36,7 @@ public class Coffee implements Parcelable {
         return name;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 
@@ -48,7 +48,7 @@ public class Coffee implements Parcelable {
         this.quantity = quantity;
     }
 
-    public int getTotalPrice() {
+    public float getTotalPrice() {
         return price * quantity;
     }
 
@@ -60,7 +60,7 @@ public class Coffee implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(name);
-        parcel.writeInt(price);
+        parcel.writeFloat(price);
         parcel.writeInt(quantity);
     }
 }

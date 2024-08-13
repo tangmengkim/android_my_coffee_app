@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Coffee> coffeeList = new ArrayList<>();
-    private int totalAmount = 0;
+    private float totalAmount = 0;
     private Button submitOrderButton;  // Declare it here
 
     @Override
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout coffeeListLayout = findViewById(R.id.coffeeListLayout);
 
         // Populate coffee data
-        coffeeList.add(new Coffee("Espresso", 5));
+        coffeeList.add(new Coffee("Espresso", 5.5f));
         coffeeList.add(new Coffee("Latte", 7));
         coffeeList.add(new Coffee("Cappuccino", 6));
 
